@@ -11,7 +11,7 @@ COPY . /app
 RUN apt-get update && \
     apt-get install -y build-essential libpq-dev && \
     pip install --upgrade pip setuptools wheel && \
-    pip install -r requirements.txt
+    pip install -r analytics/requirements.txt
 
 # Environment variables
 ENV DB_USERNAME=myuser \
@@ -23,4 +23,4 @@ ENV DB_USERNAME=myuser \
 EXPOSE 5153
 
 # Run app.py when the container launches
-CMD ["python", "app.py"]
+CMD ["python", "analytics/app.py"]
