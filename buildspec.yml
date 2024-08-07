@@ -4,6 +4,7 @@ env:
   variables:
     REPOSITORY_URI: 387581210505.dkr.ecr.us-east-1.amazonaws.com/udacity3
     REGION: us-east-1
+    CODEBUILD_IMAGE_TAG: test08080000
 
 phases:
   pre_build:
