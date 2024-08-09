@@ -15,8 +15,8 @@ RUN apt-get update && \
 
 # Environment variables
 ENV DB_USERNAME=myuser \
-    DB_HOST=127.0.0.1 \
-    DB_PORT=5433 \
+    DB_HOST=postgresql-service \
+    DB_PORT="5432" \
     DB_NAME=mydatabase
 
 # Make port 5153 available to the world outside this container
