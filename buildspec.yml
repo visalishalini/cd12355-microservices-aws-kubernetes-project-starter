@@ -4,7 +4,6 @@ env:
   variables:
     REPOSITORY_URI: 387581210505.dkr.ecr.us-east-1.amazonaws.com/udacity3
     REGION: us-east-1
-    CODEBUILD_IMAGE_TAG: test0908
 
 phases:
   pre_build:
@@ -15,14 +14,14 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - echo Building the Docker image...
-      - docker build -t $REPOSITORY_URI:$CODEBUILD_IMAGE_TAG -f analytics/Dockerfile .
-      - docker tag $REPOSITORY_URI:$CODEBUILD_IMAGE_TAG $REPOSITORY_URI:latest
+      - echo "Building the Docker image with tag: ${CODEBUILD_BUILD_NUMBER}..."
+      - docker build -t $REPOSITORY_URI:${CODEBUILD_BUILD_NUMBER} -f analytics/Dockerfile .
+      - docker tag $REPOSITORY_URI:${CODEBUILD_BUILD_NUMBER} $REPOSITORY_URI:latest
   post_build:
     commands:
       - echo Build completed on `date`
-      - echo Pushing the Docker image to ECR...
-      - docker push $REPOSITORY_URI:$CODEBUILD_IMAGE_TAG
+      - echo "Pushing the Docker image with tag: ${CODEBUILD_BUILD_NUMBER} to ECR..."
+      - docker push $REPOSITORY_URI:${CODEBUILD_BUILD_NUMBER}
       - docker push $REPOSITORY_URI:latest
 artifacts:
   files:
