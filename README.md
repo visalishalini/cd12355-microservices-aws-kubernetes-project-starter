@@ -120,15 +120,5 @@ Events: <none>
 ![image](https://github.com/user-attachments/assets/0f59c0ad-fbb5-4db3-b7c5-621f20c93da9)
 
 # CloudWatch Log Groups:
-![image](https://github.com/user-attachments/assets/29a13f97-6b97-43ef-a161-49aff374ef7b)
 
-# CloudWatch LogStream for Application
-![image](https://github.com/user-attachments/assets/8545915f-8116-4d5b-a8da-7b9c61761ac3)
-
-# External IP of LoadBalancer:
-ab3de8987e78447b39319de953930afa-1845413785.us-east-1.elb.amazonaws.com
-
-# Testing of daily_usage & user_visits api via curl:
-![image](https://github.com/user-attachments/assets/873b9b2d-d441-420a-a84e-f7ebe3dd8dc9)
-
-
+![image](https://github.com/user-attachments/assets/c2e58e52-523b-4f19-9f6c-094f67346c0c)
