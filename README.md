@@ -25,9 +25,13 @@ kubernetes ClusterIP 10.100.0.1 <none>
 postgresql-service ClusterIP 10.100.201.88 <none>
 5432/TCP 47h
 
+![image](https://github.com/user-attachments/assets/4229c2d6-fa9c-42b0-bb81-ed6a5fe57130)
+
 # $ kubectl get deployment coworking
 NAME READY UP-TO-DATE AVAILABLE AGE
 coworking 1/1 1 1 75m
+
+![image](https://github.com/user-attachments/assets/687700d6-2f73-4ef7-bc19-1bc6d5437815)
 
 # $ kubectl describe deployment coworking
 Name: coworking
@@ -68,7 +72,9 @@ Progressing True NewReplicaSetAvailable
 OldReplicaSets: <none>
 NewReplicaSet: coworking-cb5fd4b4c (1/1 replicas created)
 Events: <none>
- 
+
+![image](https://github.com/user-attachments/assets/b64ffc4d-bbc1-42d9-aca9-2d24c9878351)
+
 # $ kubectl get pods -A
 NAMESPACE NAME READY STATUS
 RESTARTS AGE
@@ -92,6 +98,8 @@ Running 0 2d2h
 kube-system kube-proxy-zsqkt 1/1 Running 0
 2d2h
 
+![image](https://github.com/user-attachments/assets/e18b6d50-92bd-4a89-8aff-b27c5706b9c6)
+
 # $ kubectl describe service postgresql-service
 Name: postgresql-service
 Namespace: default
@@ -108,6 +116,8 @@ TargetPort: 5432/TCP
 Endpoints: 192.168.20.244:5432
 Session Affinity: None
 Events: <none>
+
+![image](https://github.com/user-attachments/assets/0f59c0ad-fbb5-4db3-b7c5-621f20c93da9)
 
 # CloudWatch Log Groups:
 ![image](https://github.com/user-attachments/assets/29a13f97-6b97-43ef-a161-49aff374ef7b)
