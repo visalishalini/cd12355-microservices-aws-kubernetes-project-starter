@@ -24,7 +24,8 @@ kubernetes ClusterIP 10.100.0.1 <none>
 443/TCP 2d1h
 postgresql-service ClusterIP 10.100.201.88 <none>
 5432/TCP 47h
-$ kubectl get deployment coworking
+
+# $ kubectl get deployment coworking
 NAME READY UP-TO-DATE AVAILABLE AGE
 coworking 1/1 1 1 75m
 
